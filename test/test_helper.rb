@@ -1,4 +1,10 @@
-$LOAD_PATH.unshift File.expand_path("../lib", __dir__)
-require "albarrync_palindrome"
+# frozen_string_literal: true
 
-require "minitest/autorun"
+$LOAD_PATH.unshift File.expand_path('../lib', __dir__)
+require 'albarrync_palindrome'
+
+require 'minitest/autorun'
+
+require 'minitest/reporters'
+
+Minitest::Reporters.use!
