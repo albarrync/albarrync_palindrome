@@ -22,4 +22,12 @@ class AlbarryncPalindromeTest < Minitest::Test
   def test_punctuated_palindrome
     assert "Madam, I'm Adam.".palindrome?
   end
+
+  def test_integer_non_palindrome
+    refute '120390'.palindrome?
+  end
+
+  def test_integer_palindrome
+    assert '123321'.palindrome?
+  end
 end

@@ -3,7 +3,7 @@
 require 'albarrync_palindrome/version'
 
 # Modifiy native String to include a method for detecting palindromes.
-class String
+module AlbarryncPalindrome
   # Method determins if reverse is equal to input.
   def palindrome?
     processed_content == processed_content.reverse
@@ -19,6 +19,15 @@ class String
 
   # Returns processed palindrome for detecting method.
   def processed_content
-    scan(/[a-z]/i).join.downcase
+    to_s.scan(/[a-z0-9]/i).join.downcase
   end
+end
+
+# Include module in Native class
+class String
+  include AlbarryncPalindrome
+end
+# Include module in Native class
+class Integer
+  include AlbarryncPalindrome
 end

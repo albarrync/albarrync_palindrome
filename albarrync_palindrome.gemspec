@@ -4,7 +4,7 @@ require_relative 'lib/albarrync_palindrome/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'albarrync_palindrome'
-  spec.version       = AlbarryncPalindrome::VERSION
+  spec.version       = AlbarryncPalindrome::0.2.0
   spec.authors       = ['Alex Barry']
   spec.email         = ['albarrync@gmail.com']
 
