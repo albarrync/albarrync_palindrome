@@ -10,18 +10,15 @@ class String
   end
 
   # Returns the letters of a string.
+
   def letters
-    the_letters = []
-    (0..length - 1).each do |i|
-      the_letters << self[i] if self[i].match(/[a-zA-Z]/)
-    end
-    the_letters.join
+    chars.select { |c| c.match(/[a-z]/i) }.join
   end
 
   private
 
   # Returns processed palindrome for detecting method.
   def processed_content
-    letters.downcase
+    scan(/[a-z]/i).join.downcase
   end
 end
